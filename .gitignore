@@ -1,0 +1,7 @@
+node_modules
+.next
+out
+mp3
+schiller10.env
+local*
+sync.sh

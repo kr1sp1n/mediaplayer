@@ -1,0 +1,45 @@
+{
+  "name": "mediaplayer",
+  "version": "1.0.0",
+  "description": "Simple mediaplayer in the browser with the help of nextjs and sqlite",
+  "main": "index.js",
+  "scripts": {
+    "publish-db": "cp prisma/dev.db public/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "npm run publish-db",
+    "dev": "next dev",
+    "prebuild": "npm run publish-db",
+    "preexport": "next build",
+    "export": "next export",
+    "serve": "serve -l 5000 ./out",
+    "db": "prisma studio",
+    "migrate": "prisma migrate dev",
+    "postmigrate": "prisma generate",
+    "lint": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kr1sp1n/mediaplayer.git"
+  },
+  "keywords": [],
+  "author": "kr1sp1n",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kr1sp1n/mediaplayer/issues"
+  },
+  "homepage": "https://github.com/kr1sp1n/mediaplayer#readme",
+  "dependencies": {
+    "@prisma/client": "^3.8.1",
+    "config": "^3.3.7",
+    "next": "^12.0.9",
+    "sql.js": "^1.6.2"
+  },
+  "devDependencies": {
+    "filehound": "^1.17.5",
+    "music-metadata": "^7.11.7",
+    "prisma": "^3.8.1",
+    "serve": "^13.0.2",
+    "standard": "^16.0.4",
+    "uuid": "^8.3.2"
+  }
+}

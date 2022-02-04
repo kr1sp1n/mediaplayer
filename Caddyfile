@@ -1,0 +1,21 @@
+:{$PORT}
+
+route /mp3* {
+  uri strip_prefix /mp3
+  file_server {
+    browse
+    root /usr/share/caddy/mp3
+  }
+}
+
+route /* {
+  file_server {
+    browse
+    root /usr/share/caddy/out
+  }
+}
+
+log {
+  output stdout
+  level debug
+}
