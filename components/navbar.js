@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default () => {
   const pages = [
     { title: 'home', href: '/' },
-    { title: 'albums', href: '/albums' },
+    // { title: 'albums', href: '/albums' },
     { title: 'artists', href: '/artists' },
     { title: 'songs', href: '/songs' },
     { title: 'search', href: '/search' }
